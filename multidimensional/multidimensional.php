@@ -7,7 +7,6 @@
 
 /**
  * logic here
- */
 $array = array ('key1' => array(), 'key2' => array ());
 
 $n1 = 1;
@@ -24,20 +23,29 @@ for ($i = 0; $i <= $limite; $i++) {
         $array ['key2'][] = $suma;
     }
 }
-
+ */
 
 /**
  * Print the result
  */
-echo '<pre>' ;
-var_dump($array);
-echo '</pre>' ;
+
+
+//echo '<pre>' ;
+//var_dump($array);
+//echo '</pre>' ;
+
+
+
 /**
  * -Given an array of number array(1,2,3,4,5.2,4,68,43). Calculate avarage.
    - Give the next information bellow of access stats, calculate total_visits for date 07-08-2014
    - Give the next information bellow of access stats, calculate total_visits for in the range age of '25-34'
    - Give the next information bellow of access stats, calculate porcent of male, and females for date 07-08-2014 
-   - array(
+ * 
+ */
+
+
+$data = array(
        '07-08-2014 01:00' => array(
               '15-17' => array('male' => 4, 'females' => 8),
               '18-24' => array('male' => 5, 'females' => 2),
@@ -86,6 +94,14 @@ echo '</pre>' ;
               '25-34' => array('male' => 34, 'females' => 41),
               '35-44' => array('male' => 16, 'females' => 86)
        ),
-    )
+    );
 
- */
+foreach ($data as $key => $value){
+    $cont = 0;
+    foreach ($value as $key2 => $value2){
+        $cont += ($value2['male'] + $value2['females']);
+    }
+    $result[$key] = $cont;
+};
+
+$keys = array_keys($result);

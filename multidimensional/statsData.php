@@ -1,5 +1,6 @@
 <script type="text/javascript">
     var data = <?php
+                /*
                 $data = array();
 
                 //Bar
@@ -10,6 +11,13 @@
                         array('name' => 'Cosito', 'data' => array(20, 32, 15))
                     )
                 );
-                echo json_encode($data);
+                 * 
+                 */
+                include 'multidimensional.php';
+                echo json_encode($result);
+                ?>
+    var keys = <?php
+                include 'multidimensional.php';
+                echo json_encode($keys);
                 ?>
 </script>
