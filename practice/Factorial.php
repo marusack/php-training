@@ -1,7 +1,18 @@
 <?php
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Fuction para calcular el factorial de un numero positivo
+ * @param type $num
+ * @return int
  */
+ 
+function factorial($num)
+{
+    if($num){
+        return 1;
+    }
+ else {
+    return   ($num * factorial($num-1)); 
+    };
+};
 ?>
