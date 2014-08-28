@@ -1,9 +1,9 @@
 <?php
-
-/* 
- * Calcula el factorial de un numero
+/**
+ * Funcion para calcular el factorial de un numero positivo.
+ * @param int $num
+ * @return int
  */
-
 function factorial($num)
 {
     if ($num < 2){
@@ -12,3 +12,4 @@ function factorial($num)
         return ($num * factorial($num - 1));
     };
 };
+
