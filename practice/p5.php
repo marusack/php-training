@@ -5,11 +5,12 @@
  * Ejercicio 2 - ¿Por qué hay que encerrar entre llaves un grupo de sentencias
  * de una expresión de control?¿Siempre hay que hacerlo?
  * Es necesario encerrar entre llaves {} las sentencias de una estructura de control
- * cuando existe mas de una sentencia. No es necesario cuando se ejecuta una sola sentencia.
+ * cuando existe mas de una sentencia (de este moodo se transforman en una sola
+ * sentencia). No es necesario cuando se ejecuta una sola sentencia.
  */
 $num = 6;
 if ($num > 3)
-    echo "Esta es la unica sentencia que se ejecuta" . "\n";
+    echo "Esta es la unica sentencia que se ejecuta" . "<br/>";
 
 if (($num % 2) == 0) {
     $doble = $num * 2;
@@ -35,6 +36,10 @@ if (($edad >= 18) and ($edad <= 65)):
 else:
     echo "Joven";
 endif;
+
+// ? Operador ternario
+$mensaje = (($edad >= 18) and ($edad <= 65)) ? "Adulto" : "Joven";
+echo $mensaje;
 
 /*
  * Ejercicio 4 - Variar el ejemplo anterior añadiendo el caso de que si $edad es
@@ -89,7 +94,7 @@ endswitch;
 $par = 1;
 while ($par <= 100) {
     if (($par % 2) === 0) {
-        echo "Numero: $par" . "\n";
+        echo "Numero: $par" . "<br/>";
     };
     $par++;
 };
@@ -101,7 +106,7 @@ while ($par <= 100) {
 
 for ($num = 1; $num <= 100; $num++ ) {
     if (($num % 2) === 0){
-        echo "Num: $num" . "\n";
+        echo "Num: $num" . "<br/>";
     };
 };
 
@@ -118,17 +123,24 @@ $arr = 	  array('alumno1' => 'Juan',
 
 // For
 for ($i = 1; $i <= count($arr); $i++){
-    echo $arr['alumno'.$i] . "\n";
+    echo $arr['alumno'.$i] . "<br/>";
 };
 
 // While
 $i = 1;
 while ($i < (count($arr) + 1)){
-    echo $arr['alumno'.$i] . "\n";
+    echo $arr['alumno'.$i] . "<br/>";
     $i++;
 };
 
 // Foreach
 foreach ($arr as $key => $value){
-    echo $value . "\n";
+    echo $value . "<br/>";
 };
+
+// Do while
+$i = 1;
+do {
+   echo $arr['alumno'.$i] . "<br/>";
+   $i++; 
+} while ($i <= count($arr));
