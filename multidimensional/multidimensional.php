@@ -101,7 +101,24 @@ foreach ($data as $key => $value){
     foreach ($value as $key2 => $value2){
         $cont += ($value2['male'] + $value2['females']);
     }
-    $result[$key] = $cont;
+    $total_visitors_date[$key] = $cont;
+};
+$keys = array_keys($total_visitors_date);
+
+$total_visitors_age = array(
+                            '15-17' => 0,
+                            '18-24' => 0,
+                            '25-34' => 0,
+                            '35-44' => 0
+                            );
+foreach ($data as $key => $value){
+    foreach ($value as $key2 => $value2){
+        $cant = 0;
+        foreach ($value2 as $key3 => $value3){
+            $cant += $value3;    
+        }
+        $total_visitors_age[$key2] += $cant;
+    }
 };
 
-$keys = array_keys($result);
+var_dump($total_visitors_age);
