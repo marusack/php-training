@@ -8,10 +8,10 @@
  
 function factorial($num)
 {
-    if($num){
+    if($num==0){
         return 1;
     }
- else {
+    else {
     return   ($num * factorial($num-1)); 
     };
 };
