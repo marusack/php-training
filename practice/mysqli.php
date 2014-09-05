@@ -6,12 +6,11 @@ $mysqli = mysqli_connect("localhost", "hito", "admin", "users_tasks");
  * Renderiza todas las tareas de un usuario
  * @global object $mysqli
  * @param string $name
- * @return 
  */
 function renderTasks($name)
 {
     global $mysqli;
-    $query_id = mysqli_query($mysqli, "SELECT user_id FROM users WHERE name = '$name'");
+    $query_id = mysqli_query($mysqli, "SELECT * FROM users WHERE name = '$name'");
     $rowId = mysqli_fetch_assoc($query_id);
     if (is_null($rowId)){
         echo "error hiciste todo mal";
@@ -29,4 +28,41 @@ function renderTasks($name)
     };
 }
 
-renderTasks('luigi');
+/**
+ * Agregar nuevo usuario
+ * @global object $mysqli
+ * @param string $name
+ * @param string $lastname
+ */
+function addUser($name, $lastname)
+{
+    global $mysqli;
+    $add = mysqli_query($mysqli, "INSERT INTO users (name, lastname) VALUES ('$name', '$lastname')");
+    if (!$add){
+        echo mysqli_error($add);
+    }
+}
+
+/**
+ * Agrega nuevas tareas a un usuario
+ * @global object $mysqli
+ * @param string $name
+ * @param string $taskName
+ * @param int $estimatedTime
+ */
+function addTask($name, $taskName, $estimatedTime)
+{
+    global $mysqli;
+    $query = mysqli_query($mysqli, "SELECT * FROM users WHERE name = '$name'");
+    $rowId = mysqli_fetch_assoc($query);
+    if (is_null($rowId)){
+        echo "no se encuentra usuario";
+    } else {
+        $id = $rowId['user_id'];
+        $addTasks = mysqli_query($mysqli, "INSERT INTO tasks (user_id, name, estimated_time, status)"
+                                            . "VALUES ($id, '$taskName', $estimatedTime, 1)");
+        if (!$addTasks){
+            echo mysqli_error($addTasks);
+        };
+    };
+}
