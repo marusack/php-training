@@ -16,6 +16,12 @@ and open the template in the editor.
         //require_once('Factorial.php');
         //require('Factorial.php');
         ?>
+        
+        
+        
         El factorial de 5 es:<?php echo(factorial(5));?>
+        
+        
+        
     </body>
 </html>
