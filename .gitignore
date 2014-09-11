@@ -1,5 +1,7 @@
-nbproject/
-/nbproject/private/
+/nbproject
+/arrays/test.php
+/arrays/testarray.php
+/practice/css
+/practice/js
+/practice/fonts
 .gitignore
-arrays/test.php
-arrays/testarray.php
