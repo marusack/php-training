@@ -17,10 +17,12 @@
 <div id="logmsk" style="display: block;">
     <div id="userbox">
         <h1 id="signup" style="background-color: rgb(118, 171, 219); background-position: initial initial; background-repeat: initial initial;">Sign up</h1>
-        <form action="login.php" method="POST">
+        <form action="login.php" method="POST" id="form-login">
             <input id="name" name="name" placeholder="ID" style="opacity: 1; background-color: rgb(255, 255, 255); background-position: initial initial; background-repeat: initial initial;">
             <input id="pass" name="password" type="password" placeholder="Password" style="opacity: 1; background-color: rgb(255, 255, 255); background-position: initial initial; background-repeat: initial initial;">
             <input type="submit" id="signupb" style="cursor: default; text-align: center" value="Sign up"/>
+            <button>Submit</button>
+            <div>Submit</div>
         </form>
     </div>
 </div>
