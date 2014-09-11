@@ -8,5 +8,4 @@ if(isset($_POST['name']) && isset($_POST['password'])) {
 } else {
   echo 'Error wrong name/pass';
 }
-// empty($var)
 ?>
