@@ -48,7 +48,7 @@
     font-size: 14px;
 }
 
-#name {
+input {
     -moz-appearance: none;
     -webkit-appearance: none;
     padding: 0 8px;
@@ -72,6 +72,12 @@
     height: 44px;
     font-size: 16px;
     text-align: left;
+}
+
+input.inline-input {
+    width: 250px;
+    margin: auto;
+    display: inline-block;
 }
 
 #pass {
@@ -120,7 +126,7 @@
     font-size: 22px;
 }
 
-#signupb {
+button,#signupb {
     background: #f8f8f8;
     border: 1px solid #c6c6c6;
     display: inline-block;
@@ -141,6 +147,12 @@
     height: 35px;
     outline: none;
     cursor: pointer;
+}
+
+button.inline-button {
+    position: relative;
+    float: right;
+    /* height: 44px; */
 }
 
 #userbox {
@@ -637,4 +649,10 @@ body,input,select,td,textarea {
 
 #close {
     display: none;
+}
+
+.form-group {
+    margin: 20px;
+    padding-left: 15px;
+    padding-right: 15;
 }
