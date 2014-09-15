@@ -2,7 +2,7 @@
 if (isset($_POST['username'])) {
     setcookie('username', $_POST['username'], time()+60);
 };
-include 'cookies.php';
+Header('Location: cookies.php');
 ?>
 
 <!DOCTYPE html>
