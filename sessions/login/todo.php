@@ -14,14 +14,18 @@
 
 <body>
 <?php if (isset($_SESSION['name']) && isset($_SESSION['pass'])):?>
+<?php $message = "To do list: " . $_SESSION['name']; ?>
 <div id="logmsk" style="display: block;">
     <div id="userbox">
-        <h1 id="signup" style="background-color: rgb(118, 171, 219); background-position: initial initial; background-repeat: initial initial;">To do list</h1>
-        <form action="login.php" method="POST" id="form-login">
+        <h1 id="signup" style="background-color: rgb(118, 171, 219); background-position: initial initial; background-repeat: initial initial;"><?php echo $message; ?></h1>
+        <form id="form-list">
             <div class="form-group">
                 <input type ="text" class="inline-input" id="task" name="task" placeholder="New task" >
                 <button class="inline-button">Add</button>
             </div>
+        </form>
+        <form action="logout.php" method="POST" id="form-login">
+            <input type="submit" id="signupb" style="cursor: default; text-align: center" value="Log out"/>
         </form>
         <ul>
             <li>Vacation planing</li>
