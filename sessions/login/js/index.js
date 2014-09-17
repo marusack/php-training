@@ -47,6 +47,7 @@ $(function(){
       }
     });
     
+    /*
     // Desactivo el summit del form de to do list sino no me deja agregar los tasks
     $("#form-list").submit(function(){
       return false
@@ -66,4 +67,5 @@ $(function(){
     $(document).on('click', 'li', function() {
         $(this).remove();
     });
+    */
 });

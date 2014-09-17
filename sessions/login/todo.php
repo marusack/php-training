@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
-<?php session_start();?>
+<?php session_start() ?>
+<?php require 'datas.php' ?>
+
 <head>
 
   <meta charset="UTF-8">
 
-  <title>Sign Up/Login Box - CodePen</title>
+    <title>To do list</title>
 
   <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
@@ -24,14 +26,12 @@
                 <button class="inline-button">Add</button>
             </div>
         </form>
-        <form action="logout.php" method="POST" id="form-login">
-            <input type="submit" id="signupb" style="cursor: default; text-align: center" value="Log out"/>
-        </form>
         <ul>
-            <li>Vacation planing</li>
-            <li>Meeting client</li>
-            <li>Coding</li>
+            <?php foreach($tasks as $task): ?>
+                <li><?php echo $task['name']?></li>
+            <?php endforeach ?>
         </ul>
+        <a href="logout.php" class="logout">Log out</a>
     </div>
 </div>
 <?php else: ?>
