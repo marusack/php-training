@@ -15,7 +15,7 @@
 </head>
 
 <body>
-<?php if (isset($_SESSION['name']) && isset($_SESSION['pass'])):?>
+<?php if (isset($_SESSION['name']) && isset($_SESSION['password'])):?>
 <?php $message = "To do list: " . $_SESSION['name']; ?>
 <div id="logmsk" style="display: block;">
     <div id="userbox">

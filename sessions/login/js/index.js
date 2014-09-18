@@ -19,6 +19,26 @@ $(function(){
         }
     });
     
+    var duplicated_pass = $("#duplicated_password");
+    duplicated_pass.keyup(function() {
+        var $this = $(this);
+      var passLength = $this.val().length;
+
+      if (passLength >= 13) {
+         $this.css('background-color', '#FF0000');
+      } else {
+         $this.css('background-color', '#FFFFFF');
+      }
+    });
+    
+    duplicated_pass.blur(function(){
+        var $this = $(this);
+        var passLength = $this.val().length;
+        if (passLength == 0) {     
+         $this.css('background-color', '#FFFAAA');
+        }
+    });
+    
     var pass = $("#pass");
     pass.keyup(function() {
         var $this = $(this);
@@ -43,6 +63,16 @@ $(function(){
       //control
       var condition = name.val().length == 0 || name.val().length >= 13 || pass.val().length == 0 || pass.val().length >=13;
       if (condition) {
+          return false
+      }
+    });
+    
+    $("#form-signup").submit(function(){
+      //control
+      var cond_name = name.val().length == 0 || name.val().length >= 13;
+      var cond_pass = pass.val().length == 0 || pass.val().length >= 13;
+      var cond_dpass = duplicated_pass.val().length == 0 || duplicated_pass.val().length >= 13;
+      if (cond_name || cond_pass || cond_dpass) {
           return false
       }
     });
