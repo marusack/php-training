@@ -20,7 +20,7 @@
 <div id="logmsk" style="display: block;">
     <div id="userbox">
         <h1 id="signup" style="background-color: rgb(118, 171, 219); background-position: initial initial; background-repeat: initial initial;"><?php echo $message; ?></h1>
-        <form id="form-list">
+        <form action="addTasks.php" method="POST" id="form-list">
             <div class="form-group">
                 <input type ="text" class="inline-input" id="task" name="task" placeholder="New task" >
                 <button class="inline-button">Add</button>

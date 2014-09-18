@@ -47,12 +47,15 @@ $(function(){
       }
     });
     
-    /*
-    // Desactivo el summit del form de to do list sino no me deja agregar los tasks
+    // Desactivo el summit del form de to do list en caso de que no escriban ningun task
     $("#form-list").submit(function(){
-      return false
+        var condition = $('#task').val().length == 0;
+        if (condition) {
+            return false
+        }
     });
     
+    /*
     // Agrega un nuevos task a la ol y pone el input text en blanco
     var $button = $('.inline-button'); 
     $button.click(function() {

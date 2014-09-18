@@ -22,7 +22,10 @@ function getTasks($username)
 
 function addTask($username, $task)
 {
-    
+    $user = getUser($username);
+    $link = connect();
+    $add = mysqli_query($link, "INSERT INTO tasks (user_id, name, estimated_time, status) VALUES (" . $user['user_id']. ", '$task', 1, 1)");
+    return $add;
 }
 
 ?>
