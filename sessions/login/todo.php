@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
-<?php session_start() ?>
-<?php require 'datas.php' ?>
-
+<?php session_start();?>
+<?php require 'datas.php'; ?>
 <head>
 
   <meta charset="UTF-8">
 
-    <title>To do list</title>
+  <title>Sign Up/Login Box - CodePen</title>
 
   <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
@@ -15,29 +14,29 @@
 </head>
 
 <body>
-<?php if (isset($_SESSION['name']) && isset($_SESSION['password'])):?>
+<?php if (isset($_SESSION['name']) && isset($_SESSION['pass'])):?>
 <?php $message = "To do list: " . $_SESSION['name']; ?>
 <div id="logmsk" style="display: block;">
     <div id="userbox">
         <h1 id="signup" style="background-color: rgb(118, 171, 219); background-position: initial initial; background-repeat: initial initial;"><?php echo $message; ?></h1>
-        <form action="addTasks.php" method="POST" id="form-list">
+        <?php echo isset($_GET['error']) ? '<p>'.$_GET['error'].'</p>': ''?>
+        <form action="addTasks.php" method="POST" id="form-login">
             <div class="form-group">
-                <input type ="text" class="inline-input" id="task" name="task" placeholder="New task" >
-                <button class="inline-button">Add</button>
+              <input id="task" class="inline-input" name="task" placeholder="New Task" style="opacity: 1; background-color: rgb(255, 255, 255); background-position: initial initial; background-repeat: initial initial;">
+              <button class="inline-button">Add</button>
             </div>
         </form>
         <ul>
-            <?php foreach($tasks as $task): ?>
-                <li><?php echo $task['name']?></li>
-            <?php endforeach ?>
+          <?php foreach ($tasks as $task):?>
+            <li><?php echo $task['name'] ?> <a href="delete.php?task=<?php echo $task['taskid']?>" class="action-task"></a></li>
+          <?php endforeach?>
         </ul>
-        <a href="logout.php" class="logout">Log out</a>
+        <a href="logout.php" class="logout" >Logout</a>
     </div>
 </div>
 <?php else: ?>
-<?php Header('Location: index.php'); ?>
+<?php Header('Location: index.php')?>
 <?php endif; ?>
-<script src="js/index.js"></script>
 </body>
 
 </html>

@@ -1,1 +1,2 @@
-Aca van los errores
+Aca van los erroresError trying to conect to DB: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+
