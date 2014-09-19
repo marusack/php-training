@@ -10,11 +10,18 @@ function connect()
     }
 }
 
-function getUser($name)
-{
-    $link = connect();
-    $result = mysqli_query($link, "SELECT * FROM users WHERE name = '$name'");
-    return mysqli_fetch_array($result);
+function getUser($name) {
+    
+     try {
+         $link = connect();
+         $result = mysqli_query($link, 'SELECT * FROM users WHERE name="' . $name . '"');
+         
+         return mysqli_fetch_assoc($result);
+     } catch (Exception $exc) {
+         file_put_contents('logs/log.txt', $exc->getMessage());
+         throw $exc;
+     }
+
 }
 
 function getTasks($username)

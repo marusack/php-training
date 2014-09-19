@@ -5,7 +5,7 @@
 
   <meta charset="UTF-8">
 
-  <title>Sign Up/Login Box - CodePen</title>
+  <title>Register page</title>
 
   <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
