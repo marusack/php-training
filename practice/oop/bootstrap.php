@@ -3,10 +3,9 @@
  * Bootstraping app
  */
 
-define('APPDIR', 'oop');
-define('BASEDIR', realpath(dirname(__FILE__)) . '/../' . APPDIR . '/');
+define('BASEDIR', __DIR__);
 
-function autoload($className)
+function __autoload($className)
 {
     $className = ltrim($className, '\\');
     $fileName  = '';
@@ -19,8 +18,6 @@ function autoload($className)
     }
  
     $fileName .= str_replace('_', DIRECTORY_SEPARATOR, $className) . '.php';
- 
-    require $fileName;
+    
+    require BASEDIR . DIRECTORY_SEPARATOR .$fileName;
 }
-
-//hacer namespace del ejercicio tablet
