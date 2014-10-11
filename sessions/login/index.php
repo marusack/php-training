@@ -25,6 +25,7 @@
             <input id="name" name="name" placeholder="ID" style="opacity: 1; background-color: rgb(255, 255, 255); background-position: initial initial; background-repeat: initial initial;">
             <input id="pass" name="password" type="password" placeholder="Password" style="opacity: 1; background-color: rgb(255, 255, 255); background-position: initial initial; background-repeat: initial initial;">
             <input type="submit" id="signupb" style="cursor: default; text-align: center" value="Login"/>
+            
         </form>
         <a href="register.php" class="signup">Signup</a>
     </div>

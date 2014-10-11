@@ -7,7 +7,7 @@
  */
 function connect()
 {
-    $connect = mysqli_connect('localhost', 'info', 'Pa$$w0rd', 'users_tasks');
+    $connect = mysqli_connect('localhost', 'root', '', 'users_tasks');
     if (!$connect) {
         throw new Exception('Error trying to conect to DB: ' . mysqli_connect_error());
     }
@@ -92,4 +92,33 @@ function deleteTask($id)
     
     return $resutl;
 }
+function getBandera($name)
+{       
+    $user = getUser($name);
+    $link = connect();
+    $result = mysqli_query($link, 'SELECT * FROM login_attempts WHERE user_id=' . $user['user_id']);
+    $num=mysqli_num_rows($result);
+    return $num;
+    
+}
+ function activarBandera($name){
+     
+     
+    $user = getUser($name);
+    $link = connect();
+    $now = time();
+    $result = mysqli_query($link, 'INSERT INTO login_attempts (user_id, time) VALUES (' . $user['user_id'] . ', "' . $now . '")');
+    return $result;
+     
+ }
+ 
+ function CambiarEstado($name){
+     
+     
+    $user = getUser($name);
+    $link = connect();
+    $result = mysqli_query($link, 'UPDATE users SET estado="true" WHERE user_id='. $user['user_id']);
+    return $result;
+     
+ }
 ?>
