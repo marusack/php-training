@@ -25,7 +25,7 @@ if($_SESSION['attempt']<3)
                     } else {
                         //comprobacion de intentos de sesion mediante acceso a la base de datos
                         $bandera=getBandera($_POST['name']);
-                        if($bandera>3 && getUser($_POST['name']))
+                        if($bandera>3 && getUser($_POST['name']))//si el usuario existe y la los intentos son mas q 3 se bloque
                             {
                             $msj=" you have tried to login too many times";
                             CambiarEstado($_POST['name']);
@@ -49,6 +49,11 @@ if($_SESSION['attempt']<3)
             }
 }
 else{
+    if($_SESSION['attempt']>3 && getUser($_POST['name']))
+                        {
+                        
+                        CambiarEstado($_POST['name']);
+                    }
     Header('Location: index.php?error=you have tried to login too many times');
 }
 ?>
