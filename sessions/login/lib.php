@@ -121,4 +121,13 @@ function getBandera($name)
     return $result;
      
  }
+  function RestaurarEstado($name){
+     
+     
+    $user = getUser($name);
+    $link = connect();
+    $result = mysqli_query($link, 'UPDATE users SET estado="false" WHERE user_id='. $user['user_id']);
+    return $result;
+     
+ }
 ?>
