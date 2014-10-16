@@ -64,9 +64,9 @@ function deleteTask($id) {
 
 function blockUser($name) {
     $user = getUser($name);
-    if (!is_null($user)) {
+    if (!is_null($user)) { // if ($user) {
         $link = connect();
-        mysqli_query($link, "UPDATE users SET blocked = 1 WHERE user_id =" . $user['user_id'] );
+        mysqli_query($link, "UPDATE users SET blocked = 1 WHERE user_id =" . $user['user_id'] );// o preguntar por name
     }
 }
 
@@ -74,7 +74,7 @@ function userStatus($user) {
     $getuser = getUser($user);
     if (!is_null($getuser)) {
         $link = connect();
-        mysqli_query($link, "UPDATE users SET blocked = 1 WHERE user_id =" . $getuser['user_id'] );
+        mysqli_query($link, "UPDATE users SET blocked = 1 WHERE user_id =" . $getuser['user_id'] ); 
         return true;
     } else {
         return false;
