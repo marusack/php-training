@@ -19,12 +19,12 @@ $chaco->addCity(new City('Villa Angela', 3500));
 $chaco->addCity(new City('San Martin', 3500));
 $chaco->addCity(new City('Castelli', 3500));
 
-$cCities = array();
-foreach ($chaco->getCities() as $city) {
-   $cCities[] = $city->getName();
-}
+$formosa = new Province('Formosa');
+$formosa->addCity(new City('Formosa', 3600));
+$formosa->addCity(new City('Clorinda', 3600));
+$formosa->addCity(new City('Pirane', 3600));
+$formosa->addCity(new City('Comandante Fontana', 3600));
 
-header('content-type: application/json');
-print json_encode($cCities);
+$provinces = array($ctes, $chaco, $formosa);
 
 ?>

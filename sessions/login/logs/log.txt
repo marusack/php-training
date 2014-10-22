@@ -1,2 +1,10 @@
 Aca van los erroresError trying to conect to DB: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
 
+Error trying to conect to DB: Access denied for user 'hito'@'localhost' (using password: YES)
+Error trying to get user: Error trying to conect to DB: Access denied for user 'hito'@'localhost' (using password: YES)
+Error trying to conect to DB: Access denied for user 'hito'@'localhost' (using password: YES)
+Error trying to get user: Error trying to conect to DB: Access denied for user 'hito'@'localhost' (using password: YES)
+Error trying to conect to DB: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+
+Error trying to get user: Error trying to conect to DB: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+
