@@ -18,11 +18,11 @@ foreach ($formosa->getCities() as $city) {
 
 header('content-type: application/json');
 
-switch ($_GET['provincia']) {
+switch ($_GET['province']) {
     case 'Corrientes': 
-        print json_encode($corrientesCities);
+        print json_encode($ctesCities);
         break;
-    case 'Resistencia':
+    case 'Chaco':
         print json_encode($chacoCities);
         break;
     case 'Formosa':

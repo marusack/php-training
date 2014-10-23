@@ -1,6 +1,6 @@
 <html>
     <head>
-        <script scr="http://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
         <title>Ajax</title>
         <style>
             .container{
@@ -27,23 +27,24 @@
             $(".province").change(function(){
                 $(".ciudad").show();
                 $.ajax({
-                    url: './datas.php',
-                    data: {'provincia': $(".provincia").val()},
-                    contentType: 'application/json; charset=UTF-8',
+                    url: 'datas.php',
+                    data: {'province':$(".province").val()},
+//                    contentType: 'application/json; charset=UTF-8',
                     type: 'GET',
                     // beforeSend: fuction() {}
-                    success: function(cities) {
+                    success: function(data) {
+                        $(".ciudad").html('');
                         // console.log(cities);
-                        $.each(cities.city, function () {
-                            $('.ciudad').append($('<option></option>').text(this));
-                        });
+                        for (var i = 0; i < data.length; i++) {
+                            $('.ciudad').append($('<option></option>').text(data[i]));
+                        };
                     },
                     error: function (error) {
                         $('body').append('<div>' + error + '</div>');
-                    }
-                    // complete: function() {}
+                        }
+                        // complete: function() {}
+                    });
                 });
-            });
         </script>
     </body>
 </html>
