@@ -26,5 +26,5 @@ $conn = array(
 // obtaining the entity manager
 $entityManager = EntityManager::create($conn, $config);
 
-// consol command php vendor/doctrine/orm/bin/doctrine orm:schema-tool:create
+// console command php vendor/doctrine/orm/bin/doctrine orm:schema-tool:create
 ?>
