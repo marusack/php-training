@@ -9,7 +9,7 @@ class Product
     /** @Id @Column(type="integer") @GeneratedValue **/
     protected $id;
     
-     /** @Column(type="string") **/
+    /** @Column(type="string") **/
     protected $name;
 
     public function getId()
