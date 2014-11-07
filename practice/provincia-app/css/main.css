@@ -1,13 +1,9 @@
 
-
-/*
-Province-app
-*/
-
 .searchbox {
     width: auto;
     height: auto;
-    margin: 10px auto;
+    margin: 100px auto;
+    //padding-top: 2%;
     text-align: center;
 }
 
