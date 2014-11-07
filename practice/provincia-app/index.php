@@ -11,8 +11,22 @@
                 <input type="text" name="search" placeholder="Search..." size="40">
                 <input type="button" value="Search">
             </div>
-            <div class="content">
+            <div class="result-box">
                aca se arma la linea de arriba con el top de la caja 
+               <div class="column-left">
+                   <ul>
+                       <li>hola</li>
+                       <li>hola1</li>
+                   </ul>
+                   
+               </div>  
+               <div class="column-right">
+                   <ul>
+                       <li>hola</li>
+                       <li>hola1</li>
+                   </ul>
+                   
+               </div>
             </div>
         </div>  
     </body>

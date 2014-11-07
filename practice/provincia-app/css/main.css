@@ -7,6 +7,18 @@
     text-align: center;
 }
 
-.content {
+.result-box {
+    margin-top: 10px auto;
     border-top: 1px #000 solid;
+    width: 1000 px;
+    
+    
+}
+.column-left{
+    float:left;
+    display: inline-block;
+}
+.column-right{
+    float:left;
+    display: inline-block;
 }
