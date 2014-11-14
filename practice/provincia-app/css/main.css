@@ -11,14 +11,42 @@
     margin-top: 10px auto;
     border-top: 1px #000 solid;
     width: 1000 px;
+    alignment: central;
     
     
 }
 .column-left{
+    border: 1px #D5D5D5 solid;
+    background-color:#D5D5D5;
+    box-shadow: 2px 2px 5px #999;
+    margin-top: 5%;
+    margin-right: 5%;
+    margin-left:  30%;
+    padding-right: 5%;
     float:left;
     display: inline-block;
+    //alignment: central;
 }
+ul#provinciasLista li:hover{
+    cursor:pointer;
+    font-weight: bold;
+}
+
+/*.ulcl{
+    opacity: 1;
+}*/
+
 .column-right{
+    border-left: 1px #000 solid;
+    margin-top: 5%;
+    margin-left:  15%;
     float:left;
     display: inline-block;
+    //alignment: central;
+}
+.contenedor-listas{
+/*    border: 1px #245269 solid;
+    float:left;
+    display: inline-block;
+    width: 10%;*/
 }

@@ -19,8 +19,8 @@ $conn = array(
     'driver' => 'pdo_mysql',
     'host' => 'localhost',
     'dbname' => 'bugtracker',
-    'user' => 'hito',
-    'password' => 'admin',
+    'user' => 'root',
+    'password' => '',
 );
 
 // obtaining the entity manager

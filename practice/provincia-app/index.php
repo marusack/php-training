@@ -3,6 +3,7 @@
     <head>
         <title>Province App - Informatorio 2014</title>
         <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="practice/css/bootstrap.css">
         <!-- <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script> -->
     </head>
     <body>
@@ -12,21 +13,24 @@
                 <input type="button" value="Search">
             </div>
             <div class="result-box">
-               aca se arma la linea de arriba con el top de la caja 
-               <div class="column-left">
-                   <ul>
-                       <li>hola</li>
-                       <li>hola1</li>
-                   </ul>
-                   
-               </div>  
-               <div class="column-right">
-                   <ul>
-                       <li>hola</li>
-                       <li>hola1</li>
-                   </ul>
-                   
-               </div>
+               
+                                <div class="contenedor-listas"> 
+                                </div>
+                                <div class="column-left fondoTransparencia">
+                                    <ul id="provinciasLista">
+                                        <li>hola</li>
+                                        <li>hola1</li>
+                                    </ul>
+
+                                </div>  
+                                <div class="column-right ">
+                                    <ul>
+                                        <li>hola</li>
+                                        <li>hola1</li>
+                                    </ul>
+
+                                </div>
+               
             </div>
         </div>  
     </body>
