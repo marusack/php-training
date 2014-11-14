@@ -3,7 +3,7 @@
     <head>
         <title>Province App - Informatorio 2014</title>
         <link rel="stylesheet" type="text/css" href="css/main.css">
-        <link rel="stylesheet" type="text/css" href="practice/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="js/main.js">
         <!-- <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script> -->
     </head>
     <body>
