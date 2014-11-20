@@ -29,12 +29,13 @@ foreach ($argv as $nomCiudad) {
         $nuevaCiudad= new City();
         $nuevaCiudad->setName($nomCiudad);
         $nuevaCiudad->setProvince($provincia);
+        $nuevaCiudad->setPc('$provincia');
         $provincia->getCities()->add($nuevaCiudad);
         $entityManager->persist($nuevaCiudad);
         $cont+=1;
     }
 }
 //La funcion reemplaza cada %s que encuentra, con los parametros que le paso
-echo sprintf("El id de la provincia es %s. Y la cantidad de ciudades agregadas es %s\n", $provincia->getIdProvince(),$cont);
+echo sprintf("El id de la provincia es %s. Y la cantidad de ciudades agregadas es %s\n", $provincia->getId(),$cont);
 $entityManager->flush();
 ?>

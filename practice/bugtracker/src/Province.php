@@ -35,6 +35,10 @@ class Province
     {
         return $this->name;
     }
+    public function getCities()
+    {
+        return $this->cities;
+    }
 
 }
 ?>

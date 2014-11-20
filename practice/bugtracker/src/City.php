@@ -45,6 +45,11 @@ class City
     {
         return $this->pc;
     }
+    public function setProvince($province)
+    {
+        echo 'llamosa metodo';
+        $this->province = $province;
+    }
     
 }
 ?>

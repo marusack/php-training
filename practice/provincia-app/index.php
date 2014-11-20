@@ -10,7 +10,7 @@
         <div class="container">
             <div class="searchbox">
                 <input type="text" name="inputsearch" placeholder="Search..." size="40" id="inputsearch">
-                <input type="button" value="Search">
+                <input type="button" value="Search" id="buscar">
             </div>
             <div class="result-box">
                

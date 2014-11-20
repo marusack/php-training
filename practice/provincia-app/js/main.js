@@ -16,7 +16,7 @@ $(document).ready(function(){
     $("#inputsearch").keyup(function(){
         var value = $(this).val();
         if (value.length >= 0){
-            consulta = $("#text").val();
+            consulta = $("#inputsearch").val();
         var $this = $(this);
         var nameLength = $this.val().length;
         //hace la búsqueda
@@ -24,7 +24,7 @@ $(document).ready(function(){
         if (nameLength >= 2) {
             $.ajax({
                 type: "GET",
-                url: "filter_province.php",
+                url: "filterProvince.php",
                 data: {"consulta": consulta},
                 success: function(respuesta){
                     console.log(respuesta);
