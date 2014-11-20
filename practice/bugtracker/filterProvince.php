@@ -14,7 +14,7 @@
 //php load_province.php Chaco Resistencia SanMartin Fontana
 require_once 'bootstrap.php';
 array_shift($argv);
-$nomProvincia = array_shift($argv);
+$nomProvincia = array_shift($argv);// poer u get para coseguir el valor desde el idex
 $provinciaRepository = $entityManager->getRepository('Province');
 $provincia = $provinciaRepository->findOneBy(Array('name'=> $nomProvincia));
 if (is_null($provincia)){

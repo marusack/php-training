@@ -3,8 +3,8 @@
     <head>
         <title>Province App - Informatorio 2014</title>
         <link rel="stylesheet" type="text/css" href="css/main.css">
-        <script type="text/javascript" src="js/main.js"></script>
-        <!-- <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script> -->
+        
+        <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script> 
     </head>
     <body>
         <div class="container">
@@ -32,7 +32,8 @@
                                 </div>
                
             </div>
-        </div>  
+        </div> 
+        <script type="text/javascript" src="js/main.js"></script>
     </body>
 </html>
 
