@@ -19,7 +19,7 @@ $(document).ready(function(){
         var value = $(this).val();
         
         if (value.length >= 0){
-            consulta = $("#inputsearch").val();
+             var consulta = $("#inputsearch").val();
         var $this = $(this);
         var nameLength = $this.val().length;
         //hace la búsqueda
@@ -27,7 +27,7 @@ $(document).ready(function(){
         if (nameLength >= 2) {
             $.ajax({
                 type: "GET",
-                url: "/php-training2/php-training/practice/bugtracker/filterProvince.php",//http://localhost/php-training2/php-training/practice/bugtracker/filterProvince.php
+                url: " /php-training2/php-training/practice/provincia-app/filterProvince.php ",
                 data: {"consulta": consulta},
                 success: function(respuesta){
                     console.log(respuesta);
@@ -45,9 +45,14 @@ $(document).ready(function(){
 //            })
         };
     })
-})                                               
+})
+
+
+
+
+
 });
-$("#provinciasLista li").append('<li>'+'informatorio'+'</li>');
+//prueba  $("#provinciasLista li").append('<li>'+'informatorio'+'</li>');
 
 $("#provinciasLista").on('click','li', function(){
                                                       alert(this).text()

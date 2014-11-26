@@ -1,5 +1,6 @@
 <?php
 // src/Province.php
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * @Entity @Table(name="provinces")
