@@ -14,14 +14,16 @@ if (!empty($input)){
                     $city = new City();
                     $city->setName($cityName);
                     $city->setProvince($province);
-                    
+                    $city->setPc(0);
                     $province->getCities()->add($city);
                     $entityManager->persist($city);
                 }
                 $entityManager->persist($province);
     }
     $entityManager->flush();
-    echo "Seems we save them";
+    echo "###########Seems we save them###############";
+    //carga realizada con exito la primera ves con los datos provenientes de los archivos q se incluyen al inicio:D
+    //C:\wamp\www\php-training2\php-training\practice\bugtracker>php fixture_province.php
+
 }
 ?>
-

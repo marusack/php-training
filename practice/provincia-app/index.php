@@ -20,15 +20,13 @@
                                 </div>
                                 <div class="column-left fondoTransparencia">
                                     <ul id="provinciasLista">
-                                        <li>hola</li>
-                                        <li>hola1</li>
+                                        
                                     </ul>
 
                                 </div>  
                                 <div class="column-right ">
-                                    <ul>
-                                        <li>hola</li>
-                                        <li>hola1</li>
+                                    <ul id="provinciasCity">
+                                        
                                     </ul>
 
                                 </div>
